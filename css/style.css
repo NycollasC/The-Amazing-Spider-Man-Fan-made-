@@ -7,12 +7,33 @@ body{
     color: #333;
     margin: 0;
     padding: 0;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.9)),
+    url(../fundo.jpg);
 }
 #pagina{
     margin: 20px;
 }
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+p{
+  line-height: 1.6;
+  margin: 0 auto;
+  color: #E5E7EB;
+}
+p.destaque {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E5E7EB;
+}
 .menu{
-    background-color: #E23636;
+    background-color: #B91C1C;
     padding: 15px;
     text-align: center;
     border-radius: 5px;
@@ -31,7 +52,7 @@ body{
     border-radius: 10px;
 }
 .conteudo-principal h1{
-    color: #E23636;
+    color: #B91C1C;
     text-align: center;
     font-size: 30px;
 }
@@ -40,22 +61,44 @@ body{
     line-height: 1.6;
     flex: 1;
 }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+.bloco, .conteudo-principal {
+    background-color: rgba(0, 0, 0, 0.75) ;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+@media (max-width: 768px) {
 .bloco{
-    background-color: #ffffff;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
-
+    flex-direction: column;
+    text-align: center;
+}
+.bloco img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 .bloco h2{
-    color: #1E3A8A;
-    font-size: 24px;
+    color: #3B82F6;
 }
 .bloco h3{
-    color: #222;
+    color: white;
+}
+.bloco p{
+    color: white;
 }
 ul{
     margin-left: 30px;
+    color: white;
 }
 dt{
     font-weight: bold;
@@ -80,7 +123,7 @@ dt{
     caption-side: top;
     font-size: 18px;
     font-weight: bold;
-    color: #1E3A8A;
+    color: #3B82F6;
     padding: 0px;
     margin-bottom: 10px;
     background-color: #e3f2fd;
@@ -104,6 +147,9 @@ dt{
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
+tr:hover {
+  background-color: #eaeaea;
+}
 .rodape{
     background-color: #0a0a0a;
     color: #ccc;
@@ -120,7 +166,7 @@ tr:nth-child(even) {
     color: #E23636;
 }
 .imagens {
-  display: flex;
+  display: block;
   gap: 20px;
   border-radius: 8px;
 }
@@ -132,9 +178,24 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-.video{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; /* MAIS SIMPLES que padding */
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+iframe {
+  max-width: 100%;
+  border: none;
 }
